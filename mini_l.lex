@@ -16,14 +16,14 @@ DIGITS [0-9]
 
 ":=" {printf("ASSIGN\n"); currPos += yyleng;}
 ":" {printf("COLON\n"); currPos += yyleng;}
-";" {printf("SEMI COLON\n"); currPos += yyleng;}
+";" {printf("SEMICOLON\n"); currPos += yyleng;}
 "[" {printf("L_SQUARE_BRACKET\n"); currPos += yyleng;}
 "]" {printf("R_SQUARE_BRACKET\n"); currPos += yyleng;}
 "," {printf("COMMA\n"); currPos += yyleng;}
-"<" {printf("GT\n"); currPos += yyleng;}
-"<=" {printf("GTE\n"); currPos += yyleng;}
-">" {printf("LT\n"); currPos += yyleng;}
-">=" {printf("LTE\n"); currPos += yyleng;}
+"<" {printf("LT\n"); currPos += yyleng;}
+"<=" {printf("LTE\n"); currPos += yyleng;}
+">" {printf("GT\n"); currPos += yyleng;}
+">=" {printf("GTE\n"); currPos += yyleng;}
 "==" {printf("EQ\n"); currPos += yyleng;}
 "<>" {printf("NEQ\n"); currPos += yyleng;}
 "%" {printf("MOD\n"); currPos += yyleng;}
