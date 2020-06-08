@@ -71,4 +71,29 @@ In this phase of the class project, you will create a parser using the bison too
 `var -> Ident | Ident L_SQUARE_BRACKET expression R_SQUARE_BRACKET L_SQAURE BRACKET expression R_SQUARE_BRACKET | Ident L_SQUARE_BRACKET expression R_SQUARE_BRACKET`
 
 # Phase 3: Code Generation
-**TBD**
+You will need to modify your bison specification file from the previous phase of the class project so that it no longer outputs the list of productions taken during parsing.
+
+Implement the code generator. This will most likely require some enhancements to your bison specification file. You may also want to create additional implementation files. The requirements for your implementation are as follows.
+
+You do not need to do anything special to handle lexical or syntax errors in this phase of the class project. If any lexical or syntax errors are encountered, your compiler should emit appropriate error message(s) and terminate the same way as was done in previous phases.
+
+You need to check for semantic errors in the inputted MINI-L program. During code generation, if any semantic errors are encountered, then appropriate error messages should be emitted and no other output should be produced (i.e., no code should be generated).
+
+If no semantic errors are encountered, then the appropriate MIL intermediate code should be generated and written to stdout.
+
+When generating the intermediate code, be careful that you do not accidentally create a temporary variable with the same name as one of the variables specified in the original MINI-L program.
+
+Compile everything together into a single executable. The particular commands needed to compile your code generator will depend on the implementation files you create.
+
+Use the mil_run MIL interpreter to test your implementation. For each program written in MINI-L source code, compile it down to MIL code using your implementation. Then invoke the MIL code using mil_run to verify that the compiled program behaves as expected.
+
+
+[INC] Only works for fibonacci.min file (which was supplied).
+
+**How to compile:**
+1. `make`
+2. `cat fibonacci.min | ./my_compiler`
+3. `./mil_run CODE.mil < AnyFileName.txt`
+4. Results will be outputted to the terminal.
+
+This was the result of a full 24hr session right before the due date.
